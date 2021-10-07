@@ -1,6 +1,7 @@
 package com.example.testappforwork.ui.images.adapter
 
 import android.graphics.drawable.Drawable
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -12,11 +13,15 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
 import com.example.testappforwork.R
 import com.example.testappforwork.models.Image
 import com.example.testappforwork.utilities.downloadAndSetImage
 import kotlin.math.roundToInt
+
+private const val WIDTH = 1900
+private const val HEIGHT = 1100
 
 abstract class AppViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     abstract fun bind(image: Image)
@@ -38,7 +43,9 @@ class ImageViewHolder(view: View) : AppViewHolder(view) {
         progressBar.visibility = View.VISIBLE
         Glide.with(imageContent.context)
             .load(image.downloadUrl)
+            .override(WIDTH, HEIGHT)
             .transition(DrawableTransitionOptions.withCrossFade())
+            .thumbnail(0.3F)
             .listener(object : RequestListener<Drawable> {
                 override fun onLoadFailed(
                     e: GlideException?,
@@ -65,15 +72,8 @@ class ImageViewHolder(view: View) : AppViewHolder(view) {
                     return false
                 }
             })
+            .fitCenter()
             .into(imageContent)
-
-        //imageContent.downloadAndSetImage(image.downloadUrl)
-
-        // надо доработать, при первоначальной загрузке не определяет размер первых элементов
-        if (imageContent.width != 0) {
-            val scale = image.width.toDouble() / image.height.toDouble()
-            imageContent.layoutParams.height = (imageContent.width / scale).roundToInt()
-        }
     }
 }
 
