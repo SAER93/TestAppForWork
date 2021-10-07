@@ -8,4 +8,12 @@
     // Error
     <string name="error_label">Error! Try again later</string>
     <string name="error_button">Try again</string>
+    <string name="illegal_login_or_password">Неверный логин или пароль</string>
+
+    // Authentication
+    <string name="login_label">Логин</string>
+    <string name="password_label">Пароль</string>
+    <string name="login">Войти</string>
+    <string name="password_hint">••••••••</string>
+    <string name="login_hint">example@gmail.com</string>
 </resources>

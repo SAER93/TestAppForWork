@@ -11,16 +11,18 @@
 <!--    <dimen name="settings_change_photo_width">45dp</dimen>-->
 <!--    <dimen name="settings_change_photo_height">45dp</dimen>-->
 <!--    <dimen name="settings_user_photo_border">2dp</dimen>-->
-    <dimen name="layout_margin">16dp</dimen>
 
 
     <dimen name="normal_elevation">16dp</dimen>
 
     <dimen name="radius_corners">10dp</dimen>
 
-<!--    <dimen name="message_layout">64dp</dimen>-->
+    <!--    <dimen name="message_layout">64dp</dimen>-->
     <dimen name="smallest_margin">4dp</dimen>
     <dimen name="small_margin">8dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="normal_margin">16dp</dimen>
+    <dimen name="big_margin">32dp</dimen>
+
+    <dimen name="logo_height">150dp</dimen>
 
 </resources>
