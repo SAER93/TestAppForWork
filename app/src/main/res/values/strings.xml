@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TestAppForWork</string>
+
+    // Bottom navigation
+    <string name="bottom_nav_images">Картинки</string>
+    <string name="bottom_nav_auth">Авторизация</string>
+
+    // Error
+    <string name="error_label">Error! Try again later</string>
+    <string name="error_button">Try again</string>
+</resources>
