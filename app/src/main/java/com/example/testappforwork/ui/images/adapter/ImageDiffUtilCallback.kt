@@ -1,4 +1,4 @@
-package com.example.testappforwork.ui.images
+package com.example.testappforwork.ui.images.adapter
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.testappforwork.models.Image

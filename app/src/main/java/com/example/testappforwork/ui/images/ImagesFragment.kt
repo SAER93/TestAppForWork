@@ -16,6 +16,7 @@ import com.example.testappforwork.models.ErrorResult
 import com.example.testappforwork.models.PendingResult
 import com.example.testappforwork.models.SuccessResult
 import com.example.testappforwork.models.takeSuccess
+import com.example.testappforwork.ui.images.adapter.ImagesAdapter
 import com.example.testappforwork.utilities.AppScrollListener
 import dagger.hilt.android.AndroidEntryPoint
 

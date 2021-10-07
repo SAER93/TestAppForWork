@@ -1,4 +1,4 @@
-package com.example.testappforwork.ui.images
+package com.example.testappforwork.ui.images.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
