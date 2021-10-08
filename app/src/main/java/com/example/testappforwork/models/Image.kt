@@ -2,8 +2,6 @@ package com.example.testappforwork.models
 
 import com.google.gson.annotations.SerializedName
 
-data class ImagesResponse(val images: List<Image>)
-
 data class Image(
     val id: String = "",
     val author: String = "",

@@ -1,17 +1,17 @@
 package com.example.testappforwork.repository
 
-import com.example.testappforwork.models.ErrorResult
-import com.example.testappforwork.models.Image
-import com.example.testappforwork.models.SuccessResult
-import com.example.testappforwork.models.Result
-import com.example.testappforwork.repository.remote.RetrofitService
+import com.example.testappforwork.models.*
+import com.example.testappforwork.repository.remote.ImagesRetrofitClient
+import com.example.testappforwork.repository.remote.ImagesApi
+import com.example.testappforwork.repository.remote.WeatherApi
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 class Repository @Inject constructor(
-    private val retrofitService: RetrofitService
+    private val retrofitImages: ImagesApi,
+    private val retrofitWeather: WeatherApi
 ) {
     private val compositeDisposable = CompositeDisposable()
 
@@ -21,7 +21,23 @@ class Repository @Inject constructor(
         onResult: (Result<ArrayList<Image>>) -> Unit
     ) {
         compositeDisposable.add(
-            retrofitService.getImageList(page, limit)
+            retrofitImages.getImageList(page, limit)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({ images ->
+                    onResult(SuccessResult(images))
+                }, {
+                    onResult(ErrorResult())
+                })
+        )
+    }
+
+    fun getWeather(
+        cityId: Int,
+        onResult: (Result<WeatherResponse>) -> Unit
+    ) {
+        compositeDisposable.add(
+            retrofitWeather.getWeather(cityId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ images ->
