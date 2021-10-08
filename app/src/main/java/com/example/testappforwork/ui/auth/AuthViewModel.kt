@@ -28,6 +28,7 @@ class AuthViewModel @Inject constructor(
                 is SuccessResult -> {
                     result.takeSuccess()?.let {
                         _weatherLiveData.value = SuccessResult(it)
+                        _weatherLiveData.value = null
                     }
                 }
                 is ErrorResult -> {
