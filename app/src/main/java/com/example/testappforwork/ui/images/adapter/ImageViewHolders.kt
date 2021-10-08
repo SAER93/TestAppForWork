@@ -1,7 +1,6 @@
 package com.example.testappforwork.ui.images.adapter
 
 import android.graphics.drawable.Drawable
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -13,11 +12,9 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestListener
-import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
 import com.example.testappforwork.R
 import com.example.testappforwork.models.Image
-import com.example.testappforwork.utilities.downloadAndSetImage
 import kotlin.math.roundToInt
 
 abstract class AppViewHolder(view: View) : RecyclerView.ViewHolder(view) {

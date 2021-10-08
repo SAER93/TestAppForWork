@@ -64,23 +64,9 @@ dependencies {
     implementation(Dependencies.Lifecycle.viewModel)
     implementation(Dependencies.Lifecycle.liveData)
 
-    implementation(Dependencies.Kotlin.coroutines)
-
     // Hilt
     implementation(Dependencies.Hilt.android)
     kapt(Dependencies.Hilt.compiler)
-
-//    // Room
-//    implementation(Dependencies.Room.ktx)
-//    implementation(Dependencies.Room.runtime)
-//    implementation(Dependencies.Room.paging)
-//    kapt(Dependencies.Room.compiler)
-
-    // Firebase
-//    implementation(Dependencies.Firebase.auth)
-//    implementation(Dependencies.Firebase.database)
-//    implementation(Dependencies.Firebase.storage)
-//    implementation(Dependencies.Firebase.ui)
 
     // Retrofit
     implementation(Dependencies.Retrofit.retrofit)
@@ -101,12 +87,8 @@ dependencies {
     androidTestImplementation(Dependencies.Test.androidJUnit)
     androidTestImplementation(Dependencies.Test.espresso)
 
-    implementation(Dependencies.Image.cropper)
-    implementation(Dependencies.Image.circleImage)
-
     implementation(Dependencies.Utils.viewBindingDelegate)
 
     implementation(Dependencies.Image.glide)
     annotationProcessor(Dependencies.Image.glideCompiler)
-
 }

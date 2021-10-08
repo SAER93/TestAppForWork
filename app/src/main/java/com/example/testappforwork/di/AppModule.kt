@@ -22,6 +22,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
+    const val APP_ID = "appid"
+
     @Provides
     @Singleton
     fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {
@@ -36,7 +38,7 @@ object AppModule {
     fun provideWeatherOkHttp(httpLoggingInterceptor: HttpLoggingInterceptor) = OkHttpClient.Builder()
         .addInterceptor { chain ->
             var request: Request = chain.request()
-            val url: HttpUrl = request.url.newBuilder().addQueryParameter("appid", "c35880b49ff95391b3a6d0edd0c722eb").build()
+            val url: HttpUrl = request.url.newBuilder().addQueryParameter(APP_ID, "c35880b49ff95391b3a6d0edd0c722eb").build()
             request = request.newBuilder().url(url).build()
             return@addInterceptor chain.proceed(request)
         }

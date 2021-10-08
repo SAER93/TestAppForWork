@@ -1,6 +1,5 @@
 package com.example.testappforwork.repository.remote
 
-import com.example.testappforwork.models.Image
 import com.example.testappforwork.models.WeatherResponse
 import io.reactivex.Single
 import retrofit2.http.GET

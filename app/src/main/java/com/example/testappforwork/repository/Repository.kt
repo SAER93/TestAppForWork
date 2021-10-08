@@ -1,7 +1,6 @@
 package com.example.testappforwork.repository
 
 import com.example.testappforwork.models.*
-import com.example.testappforwork.repository.remote.ImagesRetrofitClient
 import com.example.testappforwork.repository.remote.ImagesApi
 import com.example.testappforwork.repository.remote.WeatherApi
 import io.reactivex.android.schedulers.AndroidSchedulers

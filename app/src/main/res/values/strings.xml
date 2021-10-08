@@ -11,10 +11,14 @@
     <string name="illegal_login_or_password">Неверный логин или пароль</string>
     <string name="error_request_auth">Ошибка авторизации</string>
 
+    // Images
+    <string name="image_content_description">Изображение</string>
+
     // Authentication
     <string name="login_label">Логин</string>
     <string name="password_label">Пароль</string>
     <string name="login">Войти</string>
     <string name="password_hint">••••••••</string>
     <string name="login_hint">example@gmail.com</string>
+    <string name="logo_content_description">Логотип</string>
 </resources>
