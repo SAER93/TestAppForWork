@@ -8,7 +8,5 @@ data class Image(
     val width: Int = 0,
     val height: Int = 0,
     val url: String = "",
-
-    @SerializedName("download_url")
-    val downloadUrl: String = ""
+    @SerializedName("download_url") val downloadUrl: String = ""
 )
