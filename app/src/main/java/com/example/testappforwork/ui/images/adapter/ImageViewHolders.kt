@@ -38,7 +38,6 @@ class ImageViewHolder(view: View) : AppViewHolder(view) {
         Glide.with(imageContent.context)
             .load(image.downloadUrl)
             .transition(DrawableTransitionOptions.withCrossFade())
-            .thumbnail(0.3F)
             .listener(object : RequestListener<Drawable> {
                 override fun onLoadFailed(
                     e: GlideException?,
