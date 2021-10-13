@@ -16,7 +16,7 @@ class ImagesAdapter: RecyclerView.Adapter<AppViewHolder>() {
         return when (viewType) {
             R.layout.image_item -> ImageViewHolder(view)
             R.layout.loading_item -> LoadingViewHolder(view)
-            else -> TODO()
+            else -> throw IllegalStateException()
         }
     }
 
